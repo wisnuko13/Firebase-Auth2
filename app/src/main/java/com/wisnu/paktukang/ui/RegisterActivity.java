@@ -1,16 +1,12 @@
 package com.wisnu.paktukang.ui;
 
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,7 +18,7 @@ import com.firebase.client.FirebaseError;
 import com.wisnu.paktukang.Constans;
 import com.wisnu.paktukang.R;
 import com.wisnu.paktukang.UserAreaActivity;
-import com.wisnu.paktukang.models.User;
+import com.wisnu.paktukang.models.User1;
 
 import java.util.Map;
 
@@ -188,7 +184,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     private void createUserInFirebaseHelper(final String name, final String email, final String uid) {
         final Firebase userLocation = new Firebase(Constans.FIREBASE_URL_USERS).child(uid);
-        User newUser = new User(name, email);
-        userLocation.setValue(newUser);
+        User1 newUser1 = new User1(name, email);
+        userLocation.setValue(newUser1);
     }
 }
